@@ -111,7 +111,7 @@ Treinamento Real Time de NodeJs.
 
 ## Instalação do projeto
 
-É necessário ter o nodejs instalado, npm, mongodb e mysql.
+É necessário ter instalado o node.js, npm, mongodb e mysql.
 
 1. Clone o repositório: `git clone git@github.com:Acadtec/nodejs`
 2. Instalar pacotes: `npm install`
