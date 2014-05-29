@@ -2,6 +2,8 @@
 
 Treinamento Real Time de NodeJs.
 
+[Link do curso](http://acadtec.com.br/curso/nodejs/)
+
 ## Conteúdo programático
 
 **Módulo 1 - Node.js:**
@@ -109,9 +111,9 @@ Treinamento Real Time de NodeJs.
 
 ## Instalação do projeto
 
-É necessário ter o nodejs instalado e o npm.
+É necessário ter o nodejs instalado, npm, mongodb e mysql.
 
-1. Clone o repositório: `git clone git@github.com:tporto/skeleton-express4`
+1. Clone o repositório: `git clone git@github.com:Acadtec/nodejs`
 2. Instalar pacotes: `npm install`
 3. Rodar: `node app`
 4. Acesse o browser: `http://localhost:3000`
