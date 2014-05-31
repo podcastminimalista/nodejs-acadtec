@@ -20,10 +20,10 @@ Treinamento Real Time de NodeJs.
 
 **Módulo 2 - Node Package Manager (NPM):**
 - Comandos
-- Módulos
-- Package.json
 - Instalação
 - Nodemon
+- Package.json
+- Módulos
 
 **Módulo 3 - Criando uma página web:**
 - Métodos HTTP
