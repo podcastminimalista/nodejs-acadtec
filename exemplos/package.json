@@ -1,0 +1,10 @@
+{
+	"name"       : "aulas-nodejs",
+	"description": "Aulas de Node.js",
+	"author"     : "Thiago Porto <thiago@waib.com.br>",
+	"version"    : "1.0.0",
+	"private"    : true,
+	"dependencies":{
+		"mongoose": "*"
+	}
+}
