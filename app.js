@@ -5,14 +5,17 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var load         = require('express-load');
+var mongoose     = require('mongoose');
+var flash 		 = require('connect-flash');
+var app 		 = express();
 
-var routes = require('./routes/index');
-var users  = require('./routes/users');
-
-var app = express();
-
-//middleware
-var erros = require('./middleware/erros');
+//conectar ao banco mongodb
+mongoose.connect('mongodb://localhost/acadtec2', function(err){
+	if (err){
+    	console.log('Erro ao conectar no mongodb: '+err);
+  	}
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,11 +28,12 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(session({ secret: 'sua-chave-secreta' }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash());
 
-app.use('/', routes);
-app.use('/users', users);
+load('models').then('controllers').then('routes').into(app);
 
 //middleware
+var erros = require('./middleware/erros');
 app.use(erros.notfound);
 app.use(erros.serverError);
 
