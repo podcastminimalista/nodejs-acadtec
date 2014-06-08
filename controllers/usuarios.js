@@ -45,6 +45,17 @@ module.exports = function(app){
 			}else{
 				res.render('usuarios/create', {user: req.body});
 			}						
+		},
+
+		show: function(req,res){
+			Usuario.findById(req.params.id, function(err,data){
+				if(err){
+					req.flash('erro', 'Erro ao carregar usuário: '+err);
+					res.redirect('/usuarios');
+				}else{
+					res.render('usuarios/show',{usuario: data, moment: moment});
+				}
+			});
 		}
 	}
 

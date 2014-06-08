@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	h1 #{usuario.nome}
+	p E-mail: #{usuario.email}
+	p Blog: #{usuario.blog}
+	p Cadastro: #{moment(usuario.data_cad).format('DD/MM/YYYY HH:MM:ss')}
+	br
+	form()
+	br
+	a(href="/usuarios") Voltar
