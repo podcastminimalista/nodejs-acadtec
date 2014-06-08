@@ -7,7 +7,8 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 var load         = require('express-load');
 var mongoose     = require('mongoose');
-var flash 		 = require('connect-flash');
+var flash 		 = require('express-flash');
+var expressValidator = require('express-validator');
 var app 		 = express();
 
 //conectar ao banco mongodb
@@ -25,6 +26,7 @@ app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(expressValidator());
 app.use(cookieParser());
 app.use(session({ secret: 'sua-chave-secreta' }));
 app.use(express.static(path.join(__dirname, 'public')));

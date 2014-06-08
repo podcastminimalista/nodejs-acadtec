@@ -16,7 +16,9 @@
     "express-session": "latest",
     "express-load": "*",
     "mongoose": "*",
-    "connect-flash" : "*",   
-    "bcrypt-nodejs" : "*" 
+    "express-flash": "*",
+    "bcrypt-nodejs": "*",
+    "moment": "~2.6.0",    
+    "express-validator": "~2.3.0"
   }
 }
